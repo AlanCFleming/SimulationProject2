@@ -13,7 +13,7 @@ with open('data/Pay-time.csv', 'r') as infile:
     infile.close() 
 
 n = len(s) 
-bincount = math.ciel(n/5)
+bincount = math.ceil(n/5)
 
 # generate a histogram 
 
