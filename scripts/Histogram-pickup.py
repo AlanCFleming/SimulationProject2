@@ -54,7 +54,7 @@ pdf = (np.exp(-(np.log(x) - mu)**2 / (2 * sigma**2))
 
 plt.plot(x, pdf, linewidth=2, color='y') 
 
-
+print(bincount, mu, sigma)
 print(scipy.stats.chisquare(count,pdf))
 
  

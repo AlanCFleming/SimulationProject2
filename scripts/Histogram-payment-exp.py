@@ -6,7 +6,7 @@ import math
 
 # read data from a file 
 
-with open('data/Arrival-time.csv', 'r') as infile: 
+with open('data/Pay-time.csv', 'r') as infile: 
 
     s = [float(value) for value in infile.readlines()] 
 
@@ -25,36 +25,28 @@ count, bins, ignored = plt.hist(s, bincount, density=True, align='mid')
  
 
 # estimate parameters from data 
+# exponential
 
 sum = 0 
 
 for v in s: 
 
-    sum = sum + np.log(v) 
+    sum = sum  + v
 
-mu = sum / n 
-
- 
-
-sum = 0 
-
-for v in s: 
-
-    sum = sum + (np.log(v) - mu)**2 
-
-sigma = math.sqrt(sum / n) 
+a = 1
+b = sum/n/a
 
 
 
 x = np.linspace(min(bins), max(bins), bincount) 
 
-pdf = (np.exp(-(np.log(x) - mu)**2 / (2 * sigma**2)) 
-
-       / (x * sigma * np.sqrt(2 * np.pi))) 
+#a exponential distribution
+pdf = (np.exp(-x/b))/b
 
 plt.plot(x, pdf, linewidth=2, color='y') 
 
-print(bincount, mu, sigma)
+
+print(bincount, b)
 print(scipy.stats.chisquare(count,pdf))
 
  
