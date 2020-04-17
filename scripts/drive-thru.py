@@ -7,7 +7,7 @@ import numpy
 ###########################################
 #Author: Alan Fleming
 #Email: alanfleming1998@gmail.com
-#Description: This is a script to simulate a 2 line 2 pump gas station. 
+#Description: This is a script to simulate a McDonalds Drivethru 
 #Asummuptions: The inter-arrival time is representable by a exponential distribution
 #              The ordering line has an infinite queue
 #              The ordering time is representable by a lognormal distribution
