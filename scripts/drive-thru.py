@@ -8,10 +8,12 @@ import numpy
 #Author: Alan Fleming
 #Email: alanfleming1998@gmail.com
 #Description: This is a script to simulate a 2 line 2 pump gas station. 
-#Asummuptions: every simulation time represent 1 minute and the simulation will run for 1020 simulation time units.
-#              The customer will grab either of the slots in their line if they are open. IE, if the second pump in line has a customer and the first doesnt, waiting customers will drive around to the customer to access the open pump.
-#              Each new customer will join a random line when they arrive.
-#              pump1 represents the pumps for one line, pump2 the other
+#Asummuptions: The inter-arrival time is representable by a exponential distribution
+#              The ordering line has an infinite queue
+#              The ordering time is representable by a lognormal distribution
+#              The Payment time is representable by a lognormal distribution
+#              The Pickup time is representable by a exponential distribution
+#              No cars will leave the line due to excessive wait times or length
 ###########################################
 
 
